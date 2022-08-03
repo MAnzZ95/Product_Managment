@@ -1,0 +1,20 @@
+<div class="card-top container-fluid">
+  <div class="container d-flex">
+
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+      <ng-container *ngFor="let item of productList.data"> <!--| filter:searchKey:'title'-->
+          <div class="card col-md-3">
+              <img src="{{item.mainImage}}" alt="">
+              <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.name}}</h5>
+              <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;"><strong>Sizes:&nbsp;</strong>{{item.sizes}}</p>
+              <p><strong>Price:</strong> ${{item.price.amount}}</p>
+              <button class="btn btn-primary" (click)=addtocart(item)>Add to cart</button>
+          </div>
+      </ng-container>
+
+  </div>
+</div>
